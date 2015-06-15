@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://onelovelyname.github.io/sitemap.xml
+Disallow: /ghost/
