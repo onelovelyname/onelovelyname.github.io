@@ -1,69 +1,18 @@
 
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>analyzing images using color difference algorithms</title>
-
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <meta name="description" content="">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="analyzing images using color difference algorithms">
-    <meta name="twitter:description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="analyzing images using color difference algorithms">
-    <meta property="og:description" content="">
+    <link rel="shortcut icon" href="../favicon.ico">
 
-    <meta name="twitter:site" content="@yourblogtwitter">
-
-<meta name="twitter:creator" content="@yourtwitter">
-
-<meta name="google-site-verification" content="">
-
-<meta property="fb:admins" content="">
-
-    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="../apple-touch-icon-precomposed.png" rel="apple-touch-icon">
-
-    <link href="http://fonts.googleapis.com/" rel="dns-prefetch">
-    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic%7COpen+Sans:700,400&amp;subset=latin,latin-ext" rel="stylesheet">
-
-    <link rel="stylesheet" href="../assets/css/main.min.css?v=e5ff95d191">
-
-    <script type="text/javascript">
-      var ga_ua = 'UA-XXXXX-X';
-
-var disqus_shortname = 'example';
-
-var enable_pjax = true;
-
-      // Pace Options
-      // ==============
-      window.paceOptions = {
-        catchupTime: 100,
-        minTime: 100,
-        elements: false,
-        restartOnRequestAfter: 500,
-        startOnPageLoad: false
-      }
-
-      // Ghostium Globals
-      // ==============
-      window.GHOSTIUM = {};
-      GHOSTIUM.haveGA = typeof ga_ua !== 'undefined' && ga_ua !== 'UA-XXXXX-X';
-      GHOSTIUM.haveDisqus = typeof disqus_shortname !== 'undefined' && disqus_shortname !== 'example';
-      GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
-    </script>
-
-    <script src="../assets/js/head-scripts.min.js?v=e5ff95d191"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=e5ff95d191">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
 
     <link rel="canonical" href="http://onelovelyname.github.io/analyzing-images/">
     
@@ -103,81 +52,45 @@ var enable_pjax = true;
 
     <meta name="generator" content="Ghost 0.6">
     <link rel="alternate" type="application/rss+xml" title="Melanie is..." href="http://onelovelyname.github.io/rss/">
-  </head>
-  <body class="post-template">
+</head>
+<body class="post-template nav-closed">
 
-    <button data-action="open-drawer" id="drawer-button" class="drawer-button"><i class="fa fa-bars"></i></button>
-<nav tabindex="-1" class="drawer">
-  <div class="drawer-container">
-    <!--.drawer-search(role="search")-->
-    <ul role="navigation" class="drawer-list">
-      
-<li class="drawer-list-item">
-  <a href="../" data-pjax>
-    <i class="fa fa-home"></i>Home
-  </a>
-</li>
-<li class="drawer-list-item">
-  <a href="http://onelovelyname.github.io/rss/">
-    <i class="fa fa-rss"></i>Subscribe to Feed
-  </a>
-</li>
-<li class="drawer-list-divider">
-<li class="drawer-list-item drawer-list-title">
-  Follow me
-</li>
-<li class="drawer-list-item">
-  <a href="http://twitter.com" target="_blank">
-    <i class="fa fa-twitter"></i>Twitter
-  </a>
-</li>
-<li class="drawer-list-item">
-  <a href="http://github.com" target="_blank">
-    <i class="fa fa-github"></i>Github
-  </a>
-</li>
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="http://onelovelyname.github.io/">Home</a></li>
     </ul>
-  </div>
-</nav>
+    <a class="subscribe-button icon-feed" href="http://onelovelyname.github.io/rss/">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
 
-    <div class="drawer-overlay"></div>
-    <main id="container" role="main" class="container">
-      <div class="surface">
-        <div class="surface-container">
-          <div data-pjax-container class="content">
-            
-<section class="wrapper wrapper-post">
-  <div class="wrapper-container">
-    <article itemscope itemtype="http://schema.org/BlogPosting" role="article" class="post post">
-        <section class="post-container">
-          <header class="post-header">
-            <ul class="post-meta-list">
-              <li class="post-meta-item">
-                <time datetime="2015-05-14" itemprop="datePublished">
-                  a month ago
-                </time>
-              </li>
-              <li class="post-meta-item">
-                <a href="index.html#disqus_thread" data-disqus-identifier="4">Comments</a>
-              </li>
-            </ul>
-            <h1 itemprop="name headline" class="post-title"><a href="index.html" itemprop="url" data-pjax title="analyzing images using color difference algorithms">analyzing images using color difference algorithms</a></h1>
-            <!--h2 itemprop="about" class="post-subtitle"></h2-->
-          </header>
-          <aside class="post-side">
-            <div class="post-author">
-                <a href="index.html" class="post-author-avatar">
-                  <img src="http://www.gravatar.com/avatar/c5a2af137be70dcd7b7b6ba5c1eca181?s=250&amp;d=mm&amp;r=x" alt="Melanie Gin">
-                </a>
-              <div class="post-author-info">
-                <a href="index.html" class="post-author-name">
-                  Melanie Gin
-                </a>
-                <p class="post-author-bio"></p>
-              </div>
-            </div>
-          </aside>
-          <div itemprop="articleBody" class="post-body">
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">analyzing images using color difference algorithms</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-05-14">14 May 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
             <p>My project team, the Courageous Trapeze (artists), inherited the Dvv.js codebase from the team of three Flabbergasted Diplomats. Dvv.js is an "out-of-the-box" distributed computing network that allows developers to identify problems on the server-side, partition them into individual chunks for solving, and outsource them to distributed clients for processing and completion. When all clients are finished solving their chunks, the server compiles the results together and outputs them for viewing.</p>
 
 <p>We decided to apply this distributed computing network to the processing of large images, in the size of 3000x5000 pixels each. How this works:</p>
@@ -197,89 +110,71 @@ var enable_pjax = true;
 <p>CIE-76 and CIE-94 are two popular algorithms for determining the difference between two colors. (<a href="http://en.wikipedia.org/wiki/Color_difference">http://en.wikipedia.org/wiki/Color_difference</a>)</p>
 
 <p>Using these tools, I was able to implement a working color difference algorithm.</p>
-          </div>
-          <footer class="post-footer">
-            <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
-                <a href="index.html" class="post-author-avatar">
-                  <img itemprop="image" src="http://www.gravatar.com/avatar/c5a2af137be70dcd7b7b6ba5c1eca181?s=250&amp;d=mm&amp;r=x" alt="Melanie Gin">
-                </a>
-              <div class="post-author-info">
-                <h4 class="post-footer-heading">Written By</h4>
-                <a href="index.html" itemprop="url" class="post-author-name">
-                  <span itemprop="name">Melanie Gin</span>
-                </a>
-                <p itemprop="description" class="post-author-bio"></p>
-                <p class="post-info">
-                  <b class="post-info-title">Published on</b>
-                  <time class="post-date">May 14, 2015</time>
-                </p>
-              </div>
-            </div>
-            <div class="post-social">
-              <h4 class="post-footer-heading">Spread the word</h4>
-              <a href="index.html#" data-action="share-twitter"><i class="fa fa-fw fa-lg fa-twitter"></i></a>
-              <a href="index.html#" data-action="share-facebook"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
-              <a href="index.html#" data-action="share-gplus"><i class="fa fa-fw fa-lg fa-google-plus"></i></a>
-            </div>
-          </footer>
         </section>
-      <section itemprop="comment" class="post-comments">
-        <div id="disqus_thread"></div>
-      </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/melanie/" style="background-image: url(http://www.gravatar.com/avatar/c5a2af137be70dcd7b7b6ba5c1eca181?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Melanie Gin's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/melanie/">Melanie Gin</a></h4>
+
+                    <p>Read <a href="../author/melanie/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=analyzing%20images%20using%20color%20difference%20algorithms&amp;url=http://onelovelyname.github.io/analyzing-images/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://onelovelyname.github.io/analyzing-images/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://onelovelyname.github.io/analyzing-images/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
     </article>
+</main>
 
-    <footer role="contentinfo" class="footer">
-  <p><small>© 2015. All Rights Reserved.</small></p>
-  <p><small><a href="http://ghostium.oswaldoacauan.com/" target="_blank">Ghostium Theme</a> by <a href="http://twitter.com/oswaldoacauan" target="_blank">@oswaldoacauan</a></small></p>
-  <p><small>Proudly published with <a href="http://ghost.org" target="_blank">Ghost</a></small></p>
-</footer>
-  </div>
-</section>
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="../a-software-engineer/">
+        <section class="post">
+            <h2>a software engineer</h2>
+            <p>I am a software engineer. Just writing that line evokes a series of emotions. The immediate reaction is self-doubt…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="../befriending-angularjs/">
+        <section class="post">
+            <h2>befriending AngularJS</h2>
+            <p>Over the past few weeks, I've explored Angular's architecture while building a Twitter replica, a tool for non-profit dashboards,…</p>
+        </section>
+    </a>
+</aside>
 
-<script type="text/javascript">
-  if(GHOSTIUM.haveDisqus) {
-    var disqus_identifier = '4';
 
-    if(typeof DISQUS !== 'object') {
-      (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    }
-  } else {
-    document.querySelector('.post-comments').remove();
-  }
-</script>
 
-          </div>
-        </div>
-      </div>
-    </main>
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://onelovelyname.github.io">Melanie is...</a> © 2015</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
 
     <script src="../public/jquery.js?v=e5ff95d191"></script>
 
-    <script src="../assets/js/foot-scripts.min.js?v=e5ff95d191"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=e5ff95d191"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=e5ff95d191"></script>
 
-    <script type="text/javascript">
-
-      if(GHOSTIUM.haveGA) {
-        (function(g,h,o,s,t,z){g.GoogleAnalyticsObject=s;g[s]||(g[s]=
-        function(){(g[s].q=g[s].q||[]).push(arguments)});g[s].s=+new Date;
-        t=h.createElement(o);z=h.getElementsByTagName(o)[0];
-        t.src='//www.google-analytics.com/analytics.js';
-        z.parentNode.insertBefore(t,z)}(window,document,'script','ga'));
-        ga('create',ga_ua);ga('send','pageview');
-      }
-
-      if(GHOSTIUM.haveDisqus) {
-        (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-      }
-    </script>
-  </body>
+</body>
